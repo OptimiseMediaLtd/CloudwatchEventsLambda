@@ -3,6 +3,10 @@
 var response = require('cfn-response');
 var AWS = require('aws-sdk');
 
+AWS.config.apiVersions = {
+    cloudwatchevents: '2015-10-07'
+};
+
 exports.handler = function (event, context) {
     
     console.log('REQUEST RECEIVED:\\n', JSON.stringify(event));
